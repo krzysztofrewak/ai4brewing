@@ -1,0 +1,1985 @@
+{
+  "ogbu2026": {
+    "position": {
+      "x": 2,
+      "y": 0
+    },
+    "country": "ng",
+    "keywords": [],
+    "references": [
+      "howard2022",
+      "nettesheim2024b",
+      "nettesheim2024",
+      "dazzarola2026",
+      "schreurs2024"
+    ]
+  },
+  "li2026": {
+    "position": {
+      "x": 0,
+      "y": 1
+    },
+    "country": "cn",
+    "keywords": [],
+    "references": []
+  },
+  "nettesheim2026": {
+    "position": {
+      "x": 0,
+      "y": 1
+    },
+    "country": "de",
+    "keywords": [],
+    "references": [
+      "violino2020",
+      "nettesheim2024",
+      "lee2024",
+      "goffi2025",
+      "nimbalkar2020",
+      "dias2023"
+    ]
+  },
+  "rewak2026f": {
+    "position": {
+      "x": 6,
+      "y": 3
+    },
+    "country": "pl",
+    "keywords": [],
+    "references": []
+  },
+  "rewak2026b": {
+    "position": {
+      "x": 2,
+      "y": 1
+    },
+    "country": "pl",
+    "keywords": [],
+    "references": [
+      "baldo2014",
+      "dazzarola2026",
+      "georgiadis2021",
+      "goffi2025",
+      "lee2024",
+      "mickein2022",
+      "muctadir2025",
+      "rewak2025",
+      "saenz2016"
+    ]
+  },
+  "perez2026": {
+    "position": {
+      "x": 6,
+      "y": 3.5
+    },
+    "country": "es",
+    "keywords": [],
+    "references": [
+      "franca2021"
+    ]
+  },
+  "obrien2026": {
+    "position": {
+      "x": 4,
+      "y": 4
+    },
+    "country": "gb",
+    "keywords": [],
+    "references": [
+      "trelea2001",
+      "obrien2024",
+      "grassi2014"
+    ]
+  },
+  "dazzarola2026": {
+    "position": {
+      "x": 4,
+      "y": 1
+    },
+    "country": "cl",
+    "keywords": [],
+    "references": [
+      "viejo2020",
+      "viejo2020c"
+    ]
+  },
+  "hu2026": {
+    "position": {
+      "x": 0,
+      "y": 4
+    },
+    "country": "us",
+    "keywords": [],
+    "references": []
+  },
+  "rewak2026": {
+    "position": {
+      "x": 1,
+      "y": 2
+    },
+    "country": "pl",
+    "keywords": [],
+    "references": [
+      "alrifaie2022b",
+      "markovic2024",
+      "nettesheim2024",
+      "schreurs2024"
+    ]
+  },
+  "rewak2025": {
+    "position": {
+      "x": 2,
+      "y": 5
+    },
+    "country": "pl",
+    "keywords": [],
+    "references": [
+      "baldo2014",
+      "boniecki2014",
+      "georgiadis2021",
+      "mickein2021",
+      "akaninwor2021",
+      "alrifaie2022b",
+      "nettesheim2024",
+      "nimbalkar2020",
+      "saenz2016",
+      "schlechter2024",
+      "schreurs2024",
+      "sipos2021",
+      "song2001",
+      "takahashi2019",
+      "viejo2018",
+      "violino2020"
+    ]
+  },
+  "malyar2025": {
+    "position": {
+      "x": 4,
+      "y": 3
+    },
+    "country": "hu",
+    "keywords": [],
+    "references": []
+  },
+  "harris2025": {
+    "position": {
+      "x": 5.5,
+      "y": 4
+    },
+    "country": "au",
+    "keywords": [],
+    "references": [
+      "vann2017",
+      "dacosta2020",
+      "fuentes2018",
+      "gordon2018",
+      "viejo2016",
+      "viejo2017",
+      "viejo2018",
+      "viejo2019",
+      "viejo2020",
+      "viejo2020c",
+      "viejo2021"
+    ]
+  },
+  "muctadir2025": {
+    "position": {
+      "x": 4,
+      "y": 1
+    },
+    "country": "nl",
+    "keywords": [],
+    "references": [
+      "lee2024"
+    ]
+  },
+  "zhou2025": {
+    "position": {
+      "x": 6,
+      "y": 1.5
+    },
+    "country": "kr",
+    "keywords": [],
+    "references": []
+  },
+  "embeyale2025": {
+    "position": {
+      "x": 1,
+      "y": 3.5
+    },
+    "country": "tw",
+    "keywords": [],
+    "references": [
+      "kozlowski2024"
+    ]
+  },
+  "conduah2025": {
+    "position": {
+      "x": 3,
+      "y": 4
+    },
+    "country": "za",
+    "keywords": [],
+    "references": [
+      "nimbalkar2020",
+      "viejo2019",
+      "violino2020",
+      "scheurs2024",
+      "takahashi2019",
+      "hlangwani2021",
+      "debska2011"
+    ]
+  },
+  "goffi2025": {
+    "position": {
+      "x": 4,
+      "y": 1
+    },
+    "country": "ca",
+    "keywords": [],
+    "references": [
+      "pogo2022",
+      "deuse2024",
+      "azubuike2024",
+      "lee2024"
+    ]
+  },
+  "tabassum2025": {
+    "position": {
+      "x": 6,
+      "y": 5
+    },
+    "country": "us",
+    "keywords": [],
+    "references": []
+  },
+  "bonatto2025": {
+    "position": {
+      "x": 6,
+      "y": 2
+    },
+    "country": "br",
+    "keywords": [],
+    "references": []
+  },
+  "edgar2025": {
+    "position": {
+      "x": 3,
+      "y": 4.5
+    },
+    "country": "ug",
+    "keywords": [],
+    "references": []
+  },
+  "estracanholli2024": {
+    "position": {
+      "x": 3,
+      "y": 4.5
+    },
+    "country": "nl",
+    "keywords": [],
+    "references": []
+  },
+  "lee2024": {
+    "position": {
+      "x": 0,
+      "y": 1
+    },
+    "country": "nl",
+    "keywords": [],
+    "references": []
+  },
+  "schreurs2024": {
+    "position": {
+      "x": 3.5,
+      "y": 4
+    },
+    "country": "be",
+    "keywords": [],
+    "references": [
+      "viejo2019"
+    ]
+  },
+  "kozlowski2024": {
+    "position": {
+      "x": 1,
+      "y": 3.5
+    },
+    "country": "pl",
+    "keywords": [],
+    "references": [
+      "ramirez2020"
+    ]
+  },
+  "obrien2024": {
+    "position": {
+      "x": 4,
+      "y": 4
+    },
+    "country": "gb",
+    "keywords": [],
+    "references": [
+      "toro1997",
+      "trelea2001"
+    ]
+  },
+  "deuse2024": {
+    "position": {
+      "x": 0,
+      "y": 1
+    },
+    "country": "de",
+    "keywords": [],
+    "references": []
+  },
+  "buonocore2024": {
+    "position": {
+      "x": 4,
+      "y": 1
+    },
+    "country": "it",
+    "keywords": [],
+    "references": [
+      "violino2020",
+      "lukinac2019",
+      "viejo2020d",
+      "viejo2021",
+      "bowler2021",
+      "grassi2014"
+    ]
+  },
+  "schlechter2024": {
+    "position": {
+      "x": 0,
+      "y": 0
+    },
+    "country": "at",
+    "keywords": [],
+    "references": [
+      "schlechter2020",
+      "schreurs2024",
+      "bravin2021",
+      "pilone2023",
+      "viejo2016",
+      "viejo2018c",
+      "viejo2020b",
+      "men2017",
+      "viejo2020c",
+      "viejo2020",
+      "viejo2020d",
+      "garcia1995",
+      "viejo2021",
+      "violino2020",
+      "gardner1994",
+      "nimsuk2019",
+      "liboa2023",
+      "viejo2019",
+      "schlechter2024b",
+      "wilson2003"
+    ]
+  },
+  "schlechter2024b": {
+    "position": {
+      "x": 0,
+      "y": 1
+    },
+    "country": "at",
+    "keywords": [],
+    "references": [
+      "gardner1994",
+      "viejo2020",
+      "viejo2021",
+      "pornpanomchai2008",
+      "schlechter2024",
+      "schlechter2020"
+    ]
+  },
+  "yu2024": {
+    "position": {
+      "x": 4,
+      "y": 0
+    },
+    "country": "cn",
+    "keywords": [],
+    "references": [
+      "viejo2016"
+    ]
+  },
+  "nettesheim2024b": {
+    "position": {
+      "x": 5,
+      "y": 1
+    },
+    "country": "de",
+    "keywords": [],
+    "references": []
+  },
+  "nettesheim2024": {
+    "position": {
+      "x": 0,
+      "y": 0
+    },
+    "country": "de",
+    "keywords": [],
+    "references": [
+      "song2001",
+      "zhang2012",
+      "duan2004",
+      "duan2007",
+      "bowler2021",
+      "viejo2018",
+      "lawrynczuk2011",
+      "hou2003",
+      "wei2006",
+      "hlangwani2021"
+    ]
+  },
+  "eastment2024": {
+    "position": {
+      "x": 6,
+      "y": 2
+    },
+    "country": "us",
+    "keywords": [],
+    "references": []
+  },
+  "dutra2024": {
+    "position": {
+      "x": 6,
+      "y": 3.5
+    },
+    "country": "br",
+    "keywords": [],
+    "references": []
+  },
+  "briatore2024": {
+    "position": {
+      "x": 0,
+      "y": 1
+    },
+    "country": "it",
+    "keywords": [],
+    "references": []
+  },
+  "bowler2024": {
+    "position": {
+      "x": 0,
+      "y": 1
+    },
+    "country": "gb",
+    "keywords": [],
+    "references": []
+  },
+  "pribic2024": {
+    "position": {
+      "x": 3,
+      "y": 4
+    },
+    "country": "rs",
+    "keywords": [],
+    "references": [
+      "takahashi2019",
+      "debska2011",
+      "zhang2012",
+      "hassen2019"
+    ]
+  },
+  "markovic2024": {
+    "position": {
+      "x": 0,
+      "y": 1
+    },
+    "country": "gb",
+    "keywords": [],
+    "references": [
+      "bowler2024",
+      "bowler2021b"
+    ]
+  },
+  "su2024": {
+    "position": {
+      "x": 0,
+      "y": 5
+    },
+    "country": "gb",
+    "keywords": [],
+    "references": []
+  },
+  "rembold2024": {
+    "position": {
+      "x": 3,
+      "y": 4
+    },
+    "country": "de",
+    "keywords": [],
+    "references": [
+      "ghasemi2011",
+      "santos2017",
+      "sipos2021"
+    ]
+  },
+  "castro2023": {
+    "position": {
+      "x": 1,
+      "y": 3
+    },
+    "country": "br",
+    "keywords": [],
+    "references": [
+      "castro2021"
+    ]
+  },
+  "pilone2023": {
+    "position": {
+      "x": 6,
+      "y": 5
+    },
+    "country": "it",
+    "keywords": [],
+    "references": []
+  },
+  "sun2023": {
+    "position": {
+      "x": 2,
+      "y": 4.5
+    },
+    "country": "cn",
+    "keywords": [],
+    "references": []
+  },
+  "dias2023": {
+    "position": {
+      "x": 0,
+      "y": 1
+    },
+    "country": "br",
+    "keywords": [],
+    "references": []
+  },
+  "liboa2023": {
+    "position": {
+      "x": 6,
+      "y": 1
+    },
+    "country": "it",
+    "keywords": [],
+    "references": [
+      "santos2017"
+    ]
+  },
+  "remmelzwaal2023": {
+    "position": {
+      "x": 5,
+      "y": 3.5
+    },
+    "country": "za",
+    "keywords": [],
+    "references": []
+  },
+  "music2023": {
+    "position": {
+      "x": 5,
+      "y": 3
+    },
+    "country": "hr",
+    "keywords": [],
+    "references": [
+      "violino2020",
+      "lukinac2019",
+      "viejo2019",
+      "yazdi2011"
+    ]
+  },
+  "pinto2023": {
+    "position": {
+      "x": 1,
+      "y": 3.5
+    },
+    "country": "br",
+    "keywords": [],
+    "references": []
+  },
+  "woestmann2022": {
+    "position": {
+      "x": 2,
+      "y": 1
+    },
+    "country": "de",
+    "keywords": [],
+    "references": []
+  },
+  "nadybski2022": {
+    "position": {
+      "x": 2,
+      "y": 0
+    },
+    "country": "pl",
+    "keywords": [],
+    "references": []
+  },
+  "howard2022": {
+    "position": {
+      "x": 4,
+      "y": 2
+    },
+    "country": "dk",
+    "keywords": [],
+    "references": [
+      "howard2021",
+      "reid2021"
+    ]
+  },
+  "hohlfeld2022": {
+    "position": {
+      "x": 5,
+      "y": 4
+    },
+    "country": "de",
+    "keywords": [],
+    "references": []
+  },
+  "pogo2022": {
+    "position": {
+      "x": 3,
+      "y": 1
+    },
+    "country": "ec",
+    "keywords": [],
+    "references": [
+      "franca2021"
+    ]
+  },
+  "zamudio2022": {
+    "position": {
+      "x": 4,
+      "y": 5
+    },
+    "country": "be",
+    "keywords": [],
+    "references": [
+      "trelea2001"
+    ]
+  },
+  "alrifaie2022b": {
+    "position": {
+      "x": 3,
+      "y": 5
+    },
+    "country": "gb",
+    "keywords": [],
+    "references": [
+      "alrifaie2022"
+    ]
+  },
+  "alrifaie2022": {
+    "position": {
+      "x": 6,
+      "y": 5
+    },
+    "country": "gb",
+    "keywords": [],
+    "references": [
+      "viejo2018c",
+      "viejo2020b",
+      "viejo2018",
+      "trelea2004",
+      "viejo2020c",
+      "shen2019",
+      "viejo2021"
+    ]
+  },
+  "nyarko2021": {
+    "position": {
+      "x": 6,
+      "y": 3
+    },
+    "country": "hr",
+    "keywords": [],
+    "references": [
+      "viejo2016",
+      "viejo2018",
+      "lukinac2019"
+    ]
+  },
+  "bowler2021b": {
+    "position": {
+      "x": 4,
+      "y": 4.5
+    },
+    "country": "gb",
+    "keywords": [],
+    "references": [
+      "bowler2021",
+      "grassi2014"
+    ]
+  },
+  "bowler2021": {
+    "position": {
+      "x": 4,
+      "y": 4.5
+    },
+    "country": "gb",
+    "keywords": [],
+    "references": [
+      "vann2017"
+    ]
+  },
+  "castro2021": {
+    "position": {
+      "x": 1,
+      "y": 3
+    },
+    "country": "br",
+    "keywords": [],
+    "references": []
+  },
+  "akaninwor2021": {
+    "position": {
+      "x": 2,
+      "y": 4
+    },
+    "country": "ng",
+    "keywords": [],
+    "references": []
+  },
+  "gabrova2021": {
+    "position": {
+      "x": 6,
+      "y": 3
+    },
+    "country": "bg",
+    "keywords": [],
+    "references": [
+      "lukinac2021",
+      "viejo2016",
+      "cimini2016"
+    ]
+  },
+  "hlangwani2021": {
+    "position": {
+      "x": 0,
+      "y": 4
+    },
+    "country": "za",
+    "keywords": [],
+    "references": [
+      "takahashi2019"
+    ]
+  },
+  "mickein2021": {
+    "position": {
+      "x": 2,
+      "y": 1
+    },
+    "country": "de",
+    "keywords": [],
+    "references": [
+      "baldo2014",
+      "baldo2017",
+      "georgiadis2021",
+      "saenz2016"
+    ]
+  },
+  "reid2021": {
+    "position": {
+      "x": 4,
+      "y": 5
+    },
+    "country": "gb",
+    "keywords": [],
+    "references": [
+      "speers2003"
+    ]
+  },
+  "franca2021": {
+    "position": {
+      "x": 4,
+      "y": 5
+    },
+    "country": "br",
+    "keywords": [],
+    "references": [
+      "grassi2014"
+    ]
+  },
+  "sipos2021": {
+    "position": {
+      "x": 4,
+      "y": 4
+    },
+    "country": "ro",
+    "keywords": [],
+    "references": [
+      "debska2011"
+    ]
+  },
+  "koulouris2021": {
+    "position": {
+      "x": 2,
+      "y": 1
+    },
+    "country": "gr",
+    "keywords": [],
+    "references": [
+      "georgiadis2021"
+    ]
+  },
+  "georgiadis2021": {
+    "position": {
+      "x": 2,
+      "y": 5
+    },
+    "country": "gr",
+    "keywords": [],
+    "references": [
+      "baldo2014"
+    ]
+  },
+  "dietler2021": {
+    "position": {
+      "x": 4,
+      "y": 3.5
+    },
+    "country": "ch",
+    "keywords": [],
+    "references": []
+  },
+  "liang2021": {
+    "position": {
+      "x": 5,
+      "y": 3.5
+    },
+    "country": "cn",
+    "keywords": [],
+    "references": []
+  },
+  "bravin2021": {
+    "position": {
+      "x": 2,
+      "y": 2
+    },
+    "country": "ch",
+    "keywords": [],
+    "references": []
+  },
+  "howard2021": {
+    "position": {
+      "x": 4,
+      "y": 2
+    },
+    "country": "dk",
+    "keywords": [],
+    "references": []
+  },
+  "viejo2021": {
+    "position": {
+      "x": 6,
+      "y": 3
+    },
+    "country": "au",
+    "keywords": [],
+    "references": [
+      "viejo2018c",
+      "viejo2020c",
+      "wilson2003",
+      "viejo2016",
+      "viejo2017",
+      "vann2017",
+      "viejo2020d",
+      "voss2019",
+      "ghasemi2011",
+      "viejo2019",
+      "pornpanomchai2008",
+      "viejo2020",
+      "violino2020"
+    ]
+  },
+  "ramirez2020": {
+    "position": {
+      "x": 1,
+      "y": 3
+    },
+    "country": "mx",
+    "keywords": [],
+    "references": [
+      "guevara2011",
+      "patricio2018",
+      "szczypinski2015"
+    ]
+  },
+  "schlechter2020": {
+    "position": {
+      "x": 2,
+      "y": 1
+    },
+    "country": "at",
+    "keywords": [],
+    "references": []
+  },
+  "boniecki2020": {
+    "position": {
+      "x": 1,
+      "y": 3.5
+    },
+    "country": "pl",
+    "keywords": [],
+    "references": [
+      "boniecki2014",
+      "riverol2007"
+    ]
+  },
+  "violino2020": {
+    "position": {
+      "x": 0,
+      "y": 0.5
+    },
+    "country": "it",
+    "keywords": [],
+    "references": [
+      "lukinac2019",
+      "nimbalkar2019",
+      "cimini2016",
+      "viejo2019b"
+    ]
+  },
+  "akinpelu2020": {
+    "position": {
+      "x": 3,
+      "y": 4
+    },
+    "country": "za",
+    "keywords": [],
+    "references": []
+  },
+  "costajunior2020": {
+    "position": {
+      "x": 3,
+      "y": 4
+    },
+    "country": "br",
+    "keywords": [],
+    "references": []
+  },
+  "viejo2020d": {
+    "position": {
+      "x": 6,
+      "y": 4.5
+    },
+    "country": "au",
+    "keywords": [],
+    "references": [
+      "viejo2016",
+      "vann2017",
+      "viejo2020b",
+      "viejo2017",
+      "viejo2019b",
+      "viejo2020",
+      "viejo2020c",
+      "ghasemi2011b",
+      "pornpanomchai2008",
+      "viejo2018",
+      "viejo2018c",
+      "violino2020"
+    ]
+  },
+  "viejo2020c": {
+    "position": {
+      "x": 6,
+      "y": 4.5
+    },
+    "country": "au",
+    "keywords": [],
+    "references": [
+      "viejo2019b",
+      "viejo2020",
+      "silva2011",
+      "fengxia2004",
+      "cimini2016",
+      "viejo2016",
+      "santos2015",
+      "zhang2012",
+      "viejo2018",
+      "viejo2019",
+      "viejo2020b",
+      "men2018",
+      "nimsuk2019",
+      "santos2017",
+      "viejo2017",
+      "viejo2018c"
+    ]
+  },
+  "viejo2020b": {
+    "position": {
+      "x": 6,
+      "y": 5
+    },
+    "country": "au",
+    "keywords": [],
+    "references": [
+      "viejo2016",
+      "viejo2017",
+      "men2018",
+      "voss2019",
+      "viejo2018",
+      "viejo2018c",
+      "viejo2020"
+    ]
+  },
+  "viejo2020": {
+    "position": {
+      "x": 6,
+      "y": 4
+    },
+    "country": "au",
+    "keywords": [],
+    "references": [
+      "viejo2018",
+      "men2018",
+      "pornpanomchai2008",
+      "voss2019",
+      "nimsuk2019",
+      "viejo2016",
+      "viejo2017",
+      "viejo2019",
+      "santos2015",
+      "santos2017"
+    ]
+  },
+  "nimbalkar2020": {
+    "position": {
+      "x": 3,
+      "y": 1
+    },
+    "country": "us",
+    "keywords": [],
+    "references": []
+  },
+  "dacosta2020": {
+    "position": {
+      "x": 6,
+      "y": 0
+    },
+    "country": "br",
+    "keywords": [],
+    "references": [
+      "cajka2010",
+      "ciosek2006",
+      "debska2011",
+      "ghasemi2011",
+      "ghasemi2011b",
+      "giovenzana2014",
+      "viejo2017",
+      "viejo2020",
+      "gordon2018",
+      "men2018",
+      "grassi2014",
+      "sikorska2007"
+    ]
+  },
+  "takahashi2019": {
+    "position": {
+      "x": 2,
+      "y": 4.5
+    },
+    "country": "br",
+    "keywords": [],
+    "references": [
+      "coelho2017"
+    ]
+  },
+  "viejo2019b": {
+    "position": {
+      "x": 6,
+      "y": 0
+    },
+    "country": "au",
+    "keywords": [],
+    "references": [
+      "viejo2016",
+      "viejo2017",
+      "viejo2018",
+      "viejo2018c",
+      "viejo2019",
+      "lukinac2019",
+      "silva2011",
+      "hepworth2004",
+      "cimini2016",
+      "santos2015",
+      "voss2019",
+      "zhang2012"
+    ]
+  },
+  "viejo2019": {
+    "position": {
+      "x": 6,
+      "y": 4
+    },
+    "country": "au",
+    "keywords": [],
+    "references": [
+      "viejo2016",
+      "viejo2017",
+      "viejo2018c",
+      "viejo2018",
+      "cajka2010",
+      "inon2006",
+      "viejo2018b"
+    ]
+  },
+  "lukinac2019": {
+    "position": {
+      "x": 6,
+      "y": 0
+    },
+    "country": "hr",
+    "keywords": [],
+    "references": [
+      "viejo2016",
+      "hepworth2004",
+      "silva2011",
+      "cimini2016"
+    ]
+  },
+  "nimsuk2019": {
+    "position": {
+      "x": 6,
+      "y": 1
+    },
+    "country": "th",
+    "keywords": [],
+    "references": [
+      "cajka2010"
+    ]
+  },
+  "voss2019": {
+    "position": {
+      "x": 6,
+      "y": 1
+    },
+    "country": "br",
+    "keywords": [],
+    "references": [
+      "santos2015",
+      "santos2017",
+      "siadat2014",
+      "men2018",
+      "ghasemi2015"
+    ]
+  },
+  "shen2019": {
+    "position": {
+      "x": 3,
+      "y": 5
+    },
+    "country": "gb",
+    "keywords": [],
+    "references": []
+  },
+  "dawasme2019": {
+    "position": {
+      "x": 3,
+      "y": 4
+    },
+    "country": "be",
+    "keywords": [],
+    "references": [
+      "becker2002"
+    ]
+  },
+  "hassen2019": {
+    "position": {
+      "x": 2,
+      "y": 4
+    },
+    "country": "us",
+    "keywords": [],
+    "references": []
+  },
+  "li2019": {
+    "position": {
+      "x": 2,
+      "y": 5
+    },
+    "country": "dk",
+    "keywords": [],
+    "references": []
+  },
+  "patricio2018": {
+    "position": {
+      "x": 1,
+      "y": 0
+    },
+    "country": "br",
+    "keywords": [],
+    "references": [
+      "boniecki2014"
+    ]
+  },
+  "men2018": {
+    "position": {
+      "x": 6,
+      "y": 1
+    },
+    "country": "cn",
+    "keywords": [],
+    "references": []
+  },
+  "viejo2018c": {
+    "position": {
+      "x": 6,
+      "y": 3
+    },
+    "country": "au",
+    "keywords": [],
+    "references": [
+      "viejo2016"
+    ]
+  },
+  "viejo2018b": {
+    "position": {
+      "x": 4,
+      "y": 4
+    },
+    "country": "au",
+    "keywords": [],
+    "references": [
+      "viejo2016",
+      "viejo2018c",
+      "viejo2018"
+    ]
+  },
+  "viejo2018": {
+    "position": {
+      "x": 6,
+      "y": 3.5
+    },
+    "country": "au",
+    "keywords": [],
+    "references": [
+      "cajka2010",
+      "garcia1995",
+      "viejo2016",
+      "viejo2017",
+      "inon2006",
+      "zhang2012",
+      "grassi2014"
+    ]
+  },
+  "fuentes2018": {
+    "position": {
+      "x": 6,
+      "y": 1
+    },
+    "country": "au",
+    "keywords": [],
+    "references": [
+      "viejo2018c",
+      "viejo2018",
+      "viejo2016"
+    ]
+  },
+  "gordon2018": {
+    "position": {
+      "x": 6,
+      "y": 5
+    },
+    "country": "au",
+    "keywords": [],
+    "references": []
+  },
+  "brattin2018": {
+    "position": {
+      "x": 6,
+      "y": 4
+    },
+    "country": "us",
+    "keywords": [],
+    "references": []
+  },
+  "huang2018": {
+    "position": {
+      "x": 5,
+      "y": 3
+    },
+    "country": "cn",
+    "keywords": [],
+    "references": []
+  },
+  "coelho2017": {
+    "position": {
+      "x": 6,
+      "y": 4.5
+    },
+    "country": "br",
+    "keywords": [],
+    "references": [
+      "inon2006"
+    ]
+  },
+  "baldo2017": {
+    "position": {
+      "x": 2,
+      "y": 5
+    },
+    "country": "br",
+    "keywords": [],
+    "references": [
+      "baldo2014"
+    ]
+  },
+  "santos2017": {
+    "position": {
+      "x": 6,
+      "y": 1
+    },
+    "country": "es",
+    "keywords": [],
+    "references": [
+      "ghasemi2011",
+      "lamagna2004",
+      "santos2015",
+      "pornpanomchai2008",
+      "ghasemi2015",
+      "siadat2014",
+      "ghasemi2011b",
+      "sikorska2007"
+    ]
+  },
+  "men2017": {
+    "position": {
+      "x": 6,
+      "y": 5
+    },
+    "country": "cn",
+    "keywords": [],
+    "references": [
+      "ghasemi2011b"
+    ]
+  },
+  "viejo2017": {
+    "position": {
+      "x": 6,
+      "y": 3.5
+    },
+    "country": "au",
+    "keywords": [],
+    "references": [
+      "viejo2016",
+      "cajka2010",
+      "inon2006",
+      "zhang2012",
+      "grassi2014"
+    ]
+  },
+  "vann2017": {
+    "position": {
+      "x": 4,
+      "y": 1
+    },
+    "country": "us",
+    "keywords": [],
+    "references": [
+      "grassi2014"
+    ]
+  },
+  "viejo2016": {
+    "position": {
+      "x": 6,
+      "y": 3.5
+    },
+    "country": "au",
+    "keywords": [],
+    "references": []
+  },
+  "saenz2016": {
+    "position": {
+      "x": 2,
+      "y": 5
+    },
+    "country": "mx",
+    "keywords": [],
+    "references": []
+  },
+  "cimini2016": {
+    "position": {
+      "x": 6,
+      "y": 3
+    },
+    "country": "it",
+    "keywords": [],
+    "references": []
+  },
+  "pettigrew2015": {
+    "position": {
+      "x": 3,
+      "y": 5
+    },
+    "country": "de",
+    "keywords": [],
+    "references": [
+      "riverol2007"
+    ]
+  },
+  "szczypinski2015": {
+    "position": {
+      "x": 1,
+      "y": 3.5
+    },
+    "country": "pl",
+    "keywords": [],
+    "references": [
+      "szczypinski2012"
+    ]
+  },
+  "santos2015": {
+    "position": {
+      "x": 6,
+      "y": 1
+    },
+    "country": "es",
+    "keywords": [],
+    "references": [
+      "ghasemi2011",
+      "ghasemi2011b",
+      "ghasemi2015"
+    ]
+  },
+  "ghasemi2015": {
+    "position": {
+      "x": 6,
+      "y": 1
+    },
+    "country": "ir",
+    "keywords": [],
+    "references": [
+      "ghasemi2011",
+      "ghasemi2011b",
+      "sikorska2007"
+    ]
+  },
+  "baldo2014": {
+    "position": {
+      "x": 2,
+      "y": 5
+    },
+    "country": "br",
+    "keywords": [],
+    "references": []
+  },
+  "grassi2014": {
+    "position": {
+      "x": 4,
+      "y": 5
+    },
+    "country": "it",
+    "keywords": [],
+    "references": []
+  },
+  "boniecki2014": {
+    "position": {
+      "x": 1,
+      "y": 3
+    },
+    "country": "pl",
+    "keywords": [],
+    "references": [
+      "fornal2007"
+    ]
+  },
+  "swierczynski2014": {
+    "position": {
+      "x": 1,
+      "y": 3.5
+    },
+    "country": "pl",
+    "keywords": [],
+    "references": []
+  },
+  "giovenzana2014": {
+    "position": {
+      "x": 4,
+      "y": 5
+    },
+    "country": "pl",
+    "keywords": [],
+    "references": []
+  },
+  "siadat2014": {
+    "position": {
+      "x": 6,
+      "y": 4
+    },
+    "country": "fr",
+    "keywords": [],
+    "references": [
+      "ghasemi2011"
+    ]
+  },
+  "zhang2012": {
+    "position": {
+      "x": 4,
+      "y": 4
+    },
+    "country": "cn",
+    "keywords": [],
+    "references": [
+      "riverol2007",
+      "assidjo2006",
+      "speers2003",
+      "trelea2004",
+      "debska2011",
+      "rousu1999",
+      "damore1993",
+      "corrieu2000",
+      "trelea2001",
+      "garcia1995",
+      "ciosek2006",
+      "ghasemi2011",
+      "cajka2010",
+      "inon2006"
+    ]
+  },
+  "szczypinski2012": {
+    "position": {
+      "x": 1,
+      "y": 3
+    },
+    "country": "pl",
+    "keywords": [],
+    "references": []
+  },
+  "debska2011": {
+    "position": {
+      "x": 6,
+      "y": 4
+    },
+    "country": "pl",
+    "keywords": [],
+    "references": [
+      "assidjo2006",
+      "ciosek2006",
+      "cajka2010",
+      "ghasemi2011"
+    ]
+  },
+  "yazdi2011": {
+    "position": {
+      "x": 5,
+      "y": 3
+    },
+    "country": "my",
+    "keywords": [],
+    "references": [
+      "duan2004"
+    ]
+  },
+  "lawrynczuk2011": {
+    "position": {
+      "x": 4,
+      "y": 4
+    },
+    "country": "pl",
+    "keywords": [],
+    "references": []
+  },
+  "guevara2011": {
+    "position": {
+      "x": 1,
+      "y": 3
+    },
+    "country": "es",
+    "keywords": [],
+    "references": []
+  },
+  "silva2011": {
+    "position": {
+      "x": 6,
+      "y": 3
+    },
+    "country": "br",
+    "keywords": [],
+    "references": []
+  },
+  "ghasemi2011b": {
+    "position": {
+      "x": 6,
+      "y": 1
+    },
+    "country": "ir",
+    "keywords": [],
+    "references": []
+  },
+  "ghasemi2011": {
+    "position": {
+      "x": 6,
+      "y": 1
+    },
+    "country": "ir",
+    "keywords": [],
+    "references": [
+      "lamagna2004"
+    ]
+  },
+  "cajka2010": {
+    "position": {
+      "x": 6,
+      "y": 4
+    },
+    "country": "cz",
+    "keywords": [],
+    "references": []
+  },
+  "mattarucchi2010": {
+    "position": {
+      "x": 6,
+      "y": 5
+    },
+    "country": "it",
+    "keywords": [],
+    "references": [
+      "cajka2010"
+    ]
+  },
+  "campos2010": {
+    "position": {
+      "x": 5,
+      "y": 3
+    },
+    "country": "pt",
+    "keywords": [],
+    "references": []
+  },
+  "vassileva2010": {
+    "position": {
+      "x": 4,
+      "y": 0
+    },
+    "country": "bg",
+    "keywords": [],
+    "references": []
+  },
+  "pornpanomchai2008": {
+    "position": {
+      "x": 6,
+      "y": 4
+    },
+    "country": "th",
+    "keywords": [],
+    "references": []
+  },
+  "mileva2008": {
+    "position": {
+      "x": 4,
+      "y": 4
+    },
+    "country": "bg",
+    "keywords": [],
+    "references": []
+  },
+  "fornal2007": {
+    "position": {
+      "x": 1,
+      "y": 3
+    },
+    "country": "pl",
+    "keywords": [],
+    "references": []
+  },
+  "sikorska2007": {
+    "position": {
+      "x": 6,
+      "y": 5
+    },
+    "country": "au",
+    "keywords": [],
+    "references": []
+  },
+  "duan2007": {
+    "position": {
+      "x": 5,
+      "y": 3.5
+    },
+    "country": "cn",
+    "keywords": [],
+    "references": []
+  },
+  "riverol2007": {
+    "position": {
+      "x": 4,
+      "y": 4
+    },
+    "country": "tt",
+    "keywords": [],
+    "references": []
+  },
+  "inon2006": {
+    "position": {
+      "x": 6,
+      "y": 4.5
+    },
+    "country": "ar",
+    "keywords": [],
+    "references": [
+      "kurz2001",
+      "becker2002",
+      "garcia1995",
+      "simutis1993"
+    ]
+  },
+  "wei2006": {
+    "position": {
+      "x": 1,
+      "y": 3.5
+    },
+    "country": "de",
+    "keywords": [],
+    "references": []
+  },
+  "assidjo2006": {
+    "position": {
+      "x": 4,
+      "y": 4
+    },
+    "country": "ci",
+    "keywords": [],
+    "references": [
+      "trelea2004"
+    ]
+  },
+  "ciosek2006": {
+    "position": {
+      "x": 6,
+      "y": 1
+    },
+    "country": "pl",
+    "keywords": [],
+    "references": []
+  },
+  "duan2004": {
+    "position": {
+      "x": 5,
+      "y": 3.5
+    },
+    "country": "cn",
+    "keywords": [],
+    "references": []
+  },
+  "trelea2004": {
+    "position": {
+      "x": 4,
+      "y": 5
+    },
+    "country": "fr",
+    "keywords": [],
+    "references": [
+      "trelea2001"
+    ]
+  },
+  "lamagna2004": {
+    "position": {
+      "x": 1,
+      "y": 1
+    },
+    "country": "ar",
+    "keywords": [],
+    "references": []
+  },
+  "hepworth2004": {
+    "position": {
+      "x": 6,
+      "y": 3
+    },
+    "country": "gb",
+    "keywords": [],
+    "references": []
+  },
+  "fengxia2004": {
+    "position": {
+      "x": 6,
+      "y": 3
+    },
+    "country": "cn",
+    "keywords": [],
+    "references": []
+  },
+  "wilson2003": {
+    "position": {
+      "x": 6,
+      "y": 4
+    },
+    "country": "gb",
+    "keywords": [],
+    "references": []
+  },
+  "hou2003": {
+    "position": {
+      "x": 3,
+      "y": 4.5
+    },
+    "country": "cn",
+    "keywords": [],
+    "references": []
+  },
+  "speers2003": {
+    "position": {
+      "x": 4,
+      "y": 5
+    },
+    "country": "ca",
+    "keywords": [],
+    "references": [
+      "corrieu2000",
+      "kurz2001"
+    ]
+  },
+  "becker2002": {
+    "position": {
+      "x": 4,
+      "y": 4
+    },
+    "country": "de",
+    "keywords": [],
+    "references": [
+      "garcia1995",
+      "simutis1993"
+    ]
+  },
+  "oconnor2002": {
+    "position": {
+      "x": 4,
+      "y": 5
+    },
+    "country": "ie",
+    "keywords": [],
+    "references": [
+      "simutis1993",
+      "gvazdaitis1994"
+    ]
+  },
+  "trelea2001": {
+    "position": {
+      "x": 4,
+      "y": 4
+    },
+    "country": "fr",
+    "keywords": [],
+    "references": [
+      "corrieu2000"
+    ]
+  },
+  "kurz2001": {
+    "position": {
+      "x": 4,
+      "y": 5
+    },
+    "country": "de",
+    "keywords": [],
+    "references": [
+      "simutis1993"
+    ]
+  },
+  "song2001": {
+    "position": {
+      "x": 3,
+      "y": 3.5
+    },
+    "country": "au",
+    "keywords": [],
+    "references": []
+  },
+  "corrieu2000": {
+    "position": {
+      "x": 4,
+      "y": 4
+    },
+    "country": "fr",
+    "keywords": [],
+    "references": []
+  },
+  "rousu1999": {
+    "position": {
+      "x": 4,
+      "y": 4
+    },
+    "country": "fi",
+    "keywords": [],
+    "references": []
+  },
+  "toro1997": {
+    "position": {
+      "x": 4,
+      "y": 5
+    },
+    "country": "es",
+    "keywords": [],
+    "references": []
+  },
+  "garcia1995": {
+    "position": {
+      "x": 4,
+      "y": 4
+    },
+    "country": "es",
+    "keywords": [],
+    "references": [
+      "garcia1994",
+      "simutis1993"
+    ]
+  },
+  "garcia1994": {
+    "position": {
+      "x": 4,
+      "y": 5
+    },
+    "country": "es",
+    "keywords": [],
+    "references": []
+  },
+  "gardner1994": {
+    "position": {
+      "x": 6,
+      "y": 5
+    },
+    "country": "gb",
+    "keywords": [],
+    "references": []
+  },
+  "syu1994": {
+    "position": {
+      "x": 4,
+      "y": 4
+    },
+    "country": "us",
+    "keywords": [],
+    "references": []
+  },
+  "damore1993": {
+    "position": {
+      "x": 4,
+      "y": 4
+    },
+    "country": "ca",
+    "keywords": [],
+    "references": []
+  },
+  "gvazdaitis1994": {
+    "position": {
+      "x": 4,
+      "y": 4
+    },
+    "country": "de",
+    "keywords": [],
+    "references": [
+      "simutis1993"
+    ]
+  },
+  "simutis1993": {
+    "position": {
+      "x": 4,
+      "y": 4.5
+    },
+    "country": "de",
+    "keywords": [],
+    "references": []
+  }
+}
