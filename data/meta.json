@@ -61,7 +61,7 @@
       "georgiadis2021",
       "goffi2025",
       "lee2024",
-      "mickein2022",
+      "mickein2021",
       "muctadir2025",
       "rewak2025",
       "saenz2016"
@@ -124,6 +124,17 @@
       "markovic2024",
       "nettesheim2024",
       "schreurs2024"
+    ]
+  },
+  "oddi2025": {
+    "position": {
+      "x": 1,
+      "y": 1
+    },
+    "country": "it",
+    "keywords": [],
+    "references": [
+      "castro2021b"
     ]
   },
   "rewak2025": {
@@ -224,7 +235,7 @@
       "nimbalkar2020",
       "viejo2019",
       "violino2020",
-      "scheurs2024",
+      "schreurs2024",
       "takahashi2019",
       "hlangwani2021",
       "debska2011"
@@ -240,7 +251,6 @@
     "references": [
       "pogo2022",
       "deuse2024",
-      "azubuike2024",
       "lee2024"
     ]
   },
@@ -724,6 +734,15 @@
       "vann2017"
     ]
   },
+  "castro2021b": {
+    "position": {
+      "x": 1,
+      "y": 3.5
+    },
+    "country": "br",
+    "keywords": [],
+    "references": []
+  },
   "castro2021": {
     "position": {
       "x": 1,
@@ -750,7 +769,7 @@
     "country": "bg",
     "keywords": [],
     "references": [
-      "lukinac2021",
+      "lukinac2019",
       "viejo2016",
       "cimini2016"
     ]
@@ -937,7 +956,7 @@
     "keywords": [],
     "references": [
       "lukinac2019",
-      "nimbalkar2019",
+      "nimbalkar2020",
       "cimini2016",
       "viejo2019b"
     ]

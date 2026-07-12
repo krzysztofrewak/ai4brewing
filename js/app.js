@@ -67,6 +67,11 @@ function computeCountries(entries) {
         .sort((a, b) => a.name.localeCompare(b.name))
 }
 
+function computeYears(entries) {
+    const years = new Set(entries.map(e => e.fields.year).filter(Boolean))
+    return Array.from(years).sort((a, b) => b.localeCompare(a))
+}
+
 function computeYearCounts(entries) {
     const counts = new Map()
     entries.forEach(e => {
@@ -96,6 +101,47 @@ function computeCountryCounts(entries) {
         .sort((a, b) => b.count - a.count || a.name.localeCompare(b.name))
 }
 
+const MONTH_NUMBERS = {
+    jan: 1, january: 1, feb: 2, february: 2, mar: 3, march: 3,
+    apr: 4, april: 4, may: 5, jun: 6, june: 6, jul: 7, july: 7,
+    aug: 8, august: 8, sep: 9, sept: 9, september: 9, oct: 10, october: 10,
+    nov: 11, november: 11, dec: 12, december: 12,
+}
+
+function monthToNumber(month) {
+    if (!month) return 0
+    const numeric = parseInt(month, 10)
+    if (Number.isFinite(numeric) && numeric >= 1 && numeric <= 12) return numeric
+    return MONTH_NUMBERS[month.trim().toLowerCase()] || 0
+}
+
+const LIST_SORT_KEYS = ["year", "author", "references", "citedBy"]
+
+function defaultListSortDir(key) {
+    return key === "author" ? "asc" : "desc"
+}
+
+function firstAuthorSurname(entry) {
+    const first = (entry.fields.author || "").split(", ")[0] || ""
+    const parts = first.trim().split(" ")
+    return parts[parts.length - 1] || ""
+}
+
+function authorList(entry) {
+    return (entry.fields.author || "").split(", ").map(a => a.trim()).filter(Boolean)
+}
+
+function computeCitedByCounts(entries) {
+    const counts = {}
+    entries.forEach(entry => {
+        const refs = Array.isArray(entry.meta?.references) ? entry.meta.references : []
+        refs.forEach(refKey => {
+            counts[refKey] = (counts[refKey] || 0) + 1
+        })
+    })
+    return counts
+}
+
 function computeAuthors(entries) {
     const stats = new Map()
     for (const entry of entries) {
@@ -119,8 +165,12 @@ function publications() {
         authors: [],
         entryTypes: [],
         countries: [],
+        years: [],
         yearCounts: [],
         countryCounts: [],
+        aboutStats: null,
+        eraStats: null,
+        citedByCounts: {},
         yearChart: null,
         countryChart: null,
         searchAuthor: "",
@@ -129,11 +179,16 @@ function publications() {
         authorSearch: "",
         typeFilter: "all",
         countryFilter: "all",
+        yearFilter: "all",
+        relationFilterType: "",
+        relationFilterKey: "",
         loading: true,
         error: null,
         activeTab: "list",
         authorSortKey: "fractional",
         authorSortDir: "desc",
+        listSortKey: "year",
+        listSortDir: "desc",
         tabs: [
             { id: "list", label: "Article list" },
             { id: "map", label: "Publication map" },
@@ -155,6 +210,11 @@ function publications() {
             this.$watch("authorSearch", () => this.syncQuery())
             this.$watch("typeFilter", () => this.syncQuery())
             this.$watch("countryFilter", () => this.syncQuery())
+            this.$watch("yearFilter", () => this.syncQuery())
+            this.$watch("relationFilterType", () => this.syncQuery())
+            this.$watch("relationFilterKey", () => this.syncQuery())
+            this.$watch("listSortKey", () => this.syncQuery())
+            this.$watch("listSortDir", () => this.syncQuery())
             this.$watch("activeTab", value => {
                 if (value === "map") this.$nextTick(() => this.renderMap())
                 if (value === "stats") this.$nextTick(() => this.renderStats())
@@ -176,6 +236,14 @@ function publications() {
             this.authorSearch = params.get("authorSearch") || ""
             this.typeFilter = params.get("type") || "all"
             this.countryFilter = params.get("country") || "all"
+            this.yearFilter = params.get("year") || "all"
+            const relType = params.get("relType")
+            this.relationFilterType = relType === "references" || relType === "citedBy" ? relType : ""
+            this.relationFilterKey = this.relationFilterType ? (params.get("relKey") || "") : ""
+            const sortKey = params.get("sort")
+            this.listSortKey = LIST_SORT_KEYS.includes(sortKey) ? sortKey : "year"
+            const sortDir = params.get("dir")
+            this.listSortDir = sortDir === "asc" || sortDir === "desc" ? sortDir : defaultListSortDir(this.listSortKey)
         },
 
         syncQuery() {
@@ -187,6 +255,13 @@ function publications() {
             if (this.authorSearch) params.set("authorSearch", this.authorSearch)
             if (this.typeFilter !== "all") params.set("type", this.typeFilter)
             if (this.countryFilter !== "all") params.set("country", this.countryFilter)
+            if (this.yearFilter !== "all") params.set("year", this.yearFilter)
+            if (this.relationFilterType && this.relationFilterKey) {
+                params.set("relType", this.relationFilterType)
+                params.set("relKey", this.relationFilterKey)
+            }
+            if (this.listSortKey !== "year") params.set("sort", this.listSortKey)
+            if (this.listSortDir !== defaultListSortDir(this.listSortKey)) params.set("dir", this.listSortDir)
             const qs = params.toString()
             history.replaceState(null, "", window.location.pathname + (qs ? `?${qs}` : ""))
         },
@@ -206,11 +281,15 @@ function publications() {
                     entry.meta = meta[entry.key] || {}
                 })
                 this.authors = computeAuthors(this.entries)
+                this.citedByCounts = computeCitedByCounts(this.entries)
                 this.entryTypes = [...new Set(this.entries.map(e => e.type))].sort()
                 this.countries = computeCountries(this.entries)
+                this.years = computeYears(this.entries)
                 this.mapNodes = computeMapNodes(this.entries, e => this.sourceName(e))
                 this.yearCounts = computeYearCounts(this.entries)
                 this.countryCounts = computeCountryCounts(this.entries)
+                this.aboutStats = computeAboutStats(this.entries)
+                this.eraStats = computeEraStats(this.entries)
             } catch (e) {
                 this.error = e.message
             } finally {
@@ -255,21 +334,159 @@ function publications() {
             this.searchSource = ""
             this.typeFilter = "all"
             this.countryFilter = "all"
+            this.yearFilter = "all"
             this.activeTab = "list"
+        },
+
+        clearListFilters() {
+            this.searchAuthor = ""
+            this.searchTitle = ""
+            this.searchSource = ""
+            this.typeFilter = "all"
+            this.countryFilter = "all"
+            this.yearFilter = "all"
+            this.relationFilterType = ""
+            this.relationFilterKey = ""
+            this.listSortKey = "year"
+            this.listSortDir = "desc"
+        },
+
+        hasActiveListFiltersOrSort() {
+            return Boolean(
+                this.searchAuthor || this.searchTitle || this.searchSource ||
+                this.typeFilter !== "all" || this.countryFilter !== "all" || this.yearFilter !== "all" ||
+                this.relationFilterKey ||
+                this.listSortKey !== "year" || this.listSortDir !== "desc"
+            )
         },
 
         filteredEntries() {
             const author = foldText(this.searchAuthor.trim())
             const title = foldText(this.searchTitle.trim())
             const source = foldText(this.searchSource.trim())
+
+            const relEntry = this.relationFilterKey
+                ? this.entries.find(e => e.key === this.relationFilterKey)
+                : null
+            const relRefs = relEntry && this.relationFilterType === "references"
+                ? (Array.isArray(relEntry.meta?.references) ? relEntry.meta.references : [])
+                : null
+
             return this.entries.filter(entry => {
                 if (this.typeFilter !== "all" && entry.type !== this.typeFilter) return false
                 if (this.countryFilter !== "all" && entry.meta.country !== this.countryFilter) return false
+                if (this.yearFilter !== "all" && entry.fields.year !== this.yearFilter) return false
                 if (author && !foldText(entry.fields.author).includes(author)) return false
                 if (title && !foldText(entry.fields.title).includes(title)) return false
                 if (source && !foldText(this.sourceName(entry)).includes(source)) return false
+                if (relRefs && !relRefs.includes(entry.key)) return false
+                if (this.relationFilterType === "citedBy" && this.relationFilterKey) {
+                    const refs = Array.isArray(entry.meta?.references) ? entry.meta.references : []
+                    if (!refs.includes(this.relationFilterKey)) return false
+                }
                 return true
             })
+        },
+
+        authorList(entry) {
+            return authorList(entry)
+        },
+
+        filterByAuthor(name) {
+            this.searchAuthor = name
+        },
+
+        filterByCountry(code) {
+            if (!code) return
+            this.countryFilter = code
+        },
+
+        filterByYear(year) {
+            if (!year) return
+            this.yearFilter = year
+        },
+
+        filterByReferences(entry) {
+            if (this.relationFilterType === "references" && this.relationFilterKey === entry.key) {
+                this.clearRelationFilter()
+                return
+            }
+            this.relationFilterType = "references"
+            this.relationFilterKey = entry.key
+        },
+
+        filterByCitedBy(entry) {
+            if (this.relationFilterType === "citedBy" && this.relationFilterKey === entry.key) {
+                this.clearRelationFilter()
+                return
+            }
+            this.relationFilterType = "citedBy"
+            this.relationFilterKey = entry.key
+        },
+
+        clearRelationFilter() {
+            this.relationFilterType = ""
+            this.relationFilterKey = ""
+        },
+
+        relationFilterSourceEntry() {
+            return this.relationFilterKey ? this.entries.find(e => e.key === this.relationFilterKey) : null
+        },
+
+        relationFilterLabel() {
+            const source = this.relationFilterSourceEntry()
+            const title = source?.fields?.title || this.relationFilterKey
+            return this.relationFilterType === "references"
+                ? `Showing publications referenced by "${title}"`
+                : `Showing publications that cite "${title}"`
+        },
+
+        setListSort(key) {
+            if (this.listSortKey === key) {
+                this.listSortDir = this.listSortDir === "asc" ? "desc" : "asc"
+            } else {
+                this.listSortKey = key
+                this.listSortDir = defaultListSortDir(key)
+            }
+        },
+
+        listSortIcon(key) {
+            if (this.listSortKey !== key) return "ti-selector text-slate-300"
+            return this.listSortDir === "asc" ? "ti-chevron-up" : "ti-chevron-down"
+        },
+
+        listSortValue(entry) {
+            switch (this.listSortKey) {
+                case "author":
+                    return foldText(firstAuthorSurname(entry))
+                case "references":
+                    return this.referencesCount(entry)
+                case "citedBy":
+                    return this.citedByCount(entry)
+                case "year":
+                default: {
+                    const year = parseInt(entry.fields.year, 10)
+                    if (!Number.isFinite(year)) return -Infinity
+                    return year * 100 + monthToNumber(entry.fields.month)
+                }
+            }
+        },
+
+        sortedEntries(list) {
+            const dir = this.listSortDir === "asc" ? 1 : -1
+            return [...list].sort((a, b) => {
+                const av = this.listSortValue(a)
+                const bv = this.listSortValue(b)
+                if (av < bv) return -dir
+                if (av > bv) return dir
+                const authorCmp = foldText(firstAuthorSurname(a)).localeCompare(foldText(firstAuthorSurname(b)))
+                if (authorCmp !== 0) return authorCmp
+                return foldText(a.fields.title).localeCompare(foldText(b.fields.title))
+            })
+        },
+
+        visibleEntries() {
+            return this.sortedEntries(this.filteredEntries())
         },
 
         sourceIcon(entry) {
@@ -279,6 +496,14 @@ function publications() {
                 return entry.type === "misc" ? "ti-database" : "ti-building"
             }
             return "ti-file-text"
+        },
+
+        referencesCount(entry) {
+            return Array.isArray(entry.meta?.references) ? entry.meta.references.length : 0
+        },
+
+        citedByCount(entry) {
+            return this.citedByCounts[entry.key] || 0
         },
 
         sourceName(entry) {

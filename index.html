@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Appendix — Artificial Intelligence in Beer Brewing: A Comprehensive Review</title>
+    <title>ai4brewing: Bibliographic corpus of AI applications in beer brewing,</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/bibtex-parse-js@0.0.24/bibtexParse.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
@@ -44,11 +44,17 @@
 
         <p class="text-slate-500 mt-4">
           This page is a supplementary appendix to the article above, listing the publications reviewed as part of the literature review. </p>
+
+        <p class="text-slate-500 mt-2">
+          <a href="https://github.com/krzysztofrewak/ai4brewing" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-amber-600 hover:underline">
+            <i class="ti ti-brand-github"></i> View repository on GitHub
+          </a>
+        </p>
       </header>
 
-      <nav class="flex gap-1 border-b border-slate-200 mb-6 overflow-x-auto">
+      <nav class="flex flex-col sm:flex-row gap-1 border-b border-slate-200 mb-6 sm:overflow-x-auto">
         <template x-for="tab in tabs" :key="tab.id">
-          <button type="button" @click="activeTab = tab.id" class="px-4 py-2 text-sm font-medium border-b-2 -mb-px whitespace-nowrap transition-colors" :class="activeTab === tab.id
+          <button type="button" @click="activeTab = tab.id" class="px-4 py-2 text-sm font-medium border-b-2 -mb-px whitespace-nowrap transition-colors w-full sm:w-auto text-left sm:text-center" :class="activeTab === tab.id
                         ? 'border-amber-500 text-amber-600'
                         : 'border-transparent text-slate-500 hover:text-slate-700 hover:border-slate-300'" x-text="tab.label"></button>
         </template>
@@ -88,32 +94,79 @@
                 <template x-for="t in entryTypes" :key="t">
                   <option :value="t" x-text="t"></option>
                 </template>
-              </select>
-              <select x-model="countryFilter" class="px-3 py-2 text-sm border border-slate-200 rounded-lg bg-white focus:outline-none focus:ring-2 focus:ring-amber-400">
-                <option value="all">All countries</option>
-                <template x-for="c in countries" :key="c.code">
-                  <option :value="c.code" x-text="c.name"></option>
-                </template>
-              </select>
+              </select> <select x-model="countryFilter" class="px-3 py-2 text-sm border border-slate-200 rounded-lg bg-white focus:outline-none focus:ring-2 focus:ring-amber-400">
+              <option value="all">All countries</option>
+              <template x-for="c in countries" :key="c.code">
+                <option :value="c.code" x-text="c.name"></option>
+              </template>
+            </select> <select x-model="yearFilter" class="px-3 py-2 text-sm border border-slate-200 rounded-lg bg-white focus:outline-none focus:ring-2 focus:ring-amber-400">
+              <option value="all">All years</option>
+              <template x-for="y in years" :key="y">
+                <option :value="y" x-text="y"></option>
+              </template>
+            </select>
             </div>
 
-            <p class="text-sm text-slate-500 mb-3"><span class="font-medium" x-text="filteredEntries().length"></span> of <span x-text="entries.length"></span> publications shown.</p>
+            <div class="flex flex-wrap items-center gap-x-1 gap-y-2 mb-3">
+              <span class="text-sm text-slate-500 mr-1">Sort by:</span>
+              <button type="button" @click="setListSort('year')" class="flex items-center gap-1 px-2.5 py-1 text-xs font-medium rounded-full border" :class="listSortKey === 'year' ? 'border-amber-300 bg-amber-50 text-amber-700' : 'border-slate-200 bg-white text-slate-500 hover:bg-slate-50'">
+                Year <i class="ti" :class="listSortIcon('year')"></i>
+              </button>
+              <button type="button" @click="setListSort('author')" class="flex items-center gap-1 px-2.5 py-1 text-xs font-medium rounded-full border" :class="listSortKey === 'author' ? 'border-amber-300 bg-amber-50 text-amber-700' : 'border-slate-200 bg-white text-slate-500 hover:bg-slate-50'">
+                First author <i class="ti" :class="listSortIcon('author')"></i>
+              </button>
+              <button type="button" @click="setListSort('references')" class="flex items-center gap-1 px-2.5 py-1 text-xs font-medium rounded-full border" :class="listSortKey === 'references' ? 'border-amber-300 bg-amber-50 text-amber-700' : 'border-slate-200 bg-white text-slate-500 hover:bg-slate-50'">
+                References <i class="ti" :class="listSortIcon('references')"></i>
+              </button>
+              <button type="button" @click="setListSort('citedBy')" class="flex items-center gap-1 px-2.5 py-1 text-xs font-medium rounded-full border" :class="listSortKey === 'citedBy' ? 'border-amber-300 bg-amber-50 text-amber-700' : 'border-slate-200 bg-white text-slate-500 hover:bg-slate-50'">
+                Citations <i class="ti" :class="listSortIcon('citedBy')"></i>
+              </button>
+              <button type="button" x-show="hasActiveListFiltersOrSort()" @click="clearListFilters()" class="flex items-center gap-1 px-2.5 py-1 text-xs font-medium rounded-full border border-slate-200 bg-white text-slate-500 hover:bg-red-50 hover:border-red-200 hover:text-red-600">
+                <i class="ti ti-x"></i> Clear filters &amp; sorting
+              </button>
+            </div>
+
+            <div x-show="relationFilterKey" class="flex items-center justify-between gap-3 mb-3 px-6 py-4 text-sm bg-amber-50 border border-amber-200 rounded-lg text-amber-800">
+              <span class="flex items-center gap-1.5 min-w-0"> <i class="ti ti-filter shrink-0"></i> <span class="truncate" x-text="relationFilterLabel()"></span> </span>
+              <button type="button" @click="clearRelationFilter()" class="shrink-0 hover:text-amber-950" title="Clear this filter">
+                <i class="ti ti-x"></i>
+              </button>
+            </div>
+
+            <p class="text-sm text-slate-500 mb-3"><span class="font-medium" x-text="visibleEntries().length"></span> of <span x-text="entries.length"></span> publications shown.</p>
 
             <div class="space-y-3">
-              <template x-for="entry in filteredEntries()" :key="entry.key">
+              <template x-for="entry in visibleEntries()" :key="entry.key">
                 <div class="bg-white rounded-lg border border-slate-200 shadow-sm px-5 py-4 hover:border-slate-300 transition-colors">
                   <div class="flex items-start justify-between gap-4">
-                    <h2 class="font-medium text-slate-900" x-text="entry.fields.title || '—'"></h2>
-                    <span class="shrink-0 flex items-center gap-1.5 text-xs font-medium text-slate-500 bg-slate-100 rounded-full px-2.5 py-1">
-                    <i x-show="entry.meta.country" :class="entry.meta.country" class="flat flag icon"></i>
-                    <span x-text="entry.fields.year || '—'"></span> </span>
+                    <h2 class="font-medium text-slate-900 min-w-0" x-text="entry.fields.title || '—'"></h2>
+                    <span class="shrink-0 flex items-center gap-3"> <span class="flex items-center gap-2 text-xs font-medium text-slate-500 bg-slate-100 rounded-full px-2.5 py-1">
+                      <button type="button" @click="filterByReferences(entry)" :disabled="referencesCount(entry) === 0" title="Show publications referenced by this article" class="flex items-center gap-1 disabled:cursor-default" :class="relationFilterType === 'references' && relationFilterKey === entry.key ? 'text-amber-600' : (referencesCount(entry) > 0 ? 'hover:text-amber-600' : '')">
+                        <i class="ti ti-arrow-up-right text-slate-400"></i><span x-text="referencesCount(entry)"></span>
+                      </button>
+                      <button type="button" @click="filterByCitedBy(entry)" :disabled="citedByCount(entry) === 0" title="Show publications that cite this article" class="flex items-center gap-1 disabled:cursor-default" :class="relationFilterType === 'citedBy' && relationFilterKey === entry.key ? 'text-amber-600' : (citedByCount(entry) > 0 ? 'hover:text-amber-600' : '')">
+                        <i class="ti ti-arrow-down-left text-slate-400"></i><span x-text="citedByCount(entry)"></span>
+                      </button>
+                    </span> <span class="flex items-center gap-1.5 text-xs font-medium text-slate-500 bg-slate-100 rounded-full px-2.5 py-1">
+                      <button type="button" x-show="entry.meta.country" @click="filterByCountry(entry.meta.country)" title="Filter by country" class="flex items-center hover:opacity-70">
+                        <i :class="entry.meta.country" class="flat flag icon"></i>
+                      </button>
+                      <button type="button" x-show="entry.fields.year" @click="filterByYear(entry.fields.year)" title="Filter by year" class="hover:text-amber-600 hover:underline" x-text="entry.fields.year"></button>
+                      <span x-show="!entry.fields.year">—</span> </span> </span>
                   </div>
-                  <p class="text-sm text-slate-600 mt-1 flex items-center gap-1.5">
-                    <i class="ti ti-users text-slate-400"></i> <span x-text="entry.fields.author || '—'"></span>
+                  <p class="text-sm text-slate-600 mt-1 flex items-start gap-1.5 flex-wrap">
+                    <i class="ti ti-users text-slate-400 mt-0.5"></i>
+                    <template x-if="authorList(entry).length === 0"><span>—</span></template>
+                    <template x-for="(name, index) in authorList(entry)" :key="index">
+                      <span>
+                        <button type="button" @click="filterByAuthor(name)" title="Filter by author" class="hover:text-amber-600 hover:underline" x-text="name"></button>
+                        <span x-show="index < authorList(entry).length - 1">,</span> </span>
+                    </template>
                   </p>
                   <div class="flex items-center justify-between gap-4 mt-2">
-                    <p class="text-sm text-slate-500 italic flex items-center gap-1.5 flex-wrap">
-                      <i class="ti text-slate-400 not-italic" :class="sourceIcon(entry)"></i> <span x-text="sourceName(entry)"></span> <span x-show="citationMeta(entry)" class="not-italic text-slate-400" x-text="citationMeta(entry)"></span>
+                    <p class="text-sm text-slate-500 italic flex items-start gap-1.5 flex-1 min-w-0">
+                      <i class="ti text-slate-400 not-italic mt-0.5" :class="sourceIcon(entry)"></i> <span class="min-w-0"><span x-text="sourceName(entry)"></span>
+                      <span x-show="citationMeta(entry)" class="not-italic text-slate-400" x-text="citationMeta(entry)"></span></span>
                     </p>
                     <div class="flex items-center gap-2 shrink-0">
                       <a x-show="entry.fields.doi" :href="'https://doi.org/' + entry.fields.doi" target="_blank" rel="noopener noreferrer">
@@ -144,16 +197,14 @@
           <div>
             <div class="flex items-start justify-between gap-4 mb-3">
               <p class="text-sm text-slate-500">
-                Position reflects each publication's process stage (x-axis) and methodological approach (y-axis). Click a bubble to highlight its citation links; click it again to open its source.
-              </p>
-              <button type="button" @click="exportMapSVG()"
-                      class="shrink-0 flex items-center gap-1.5 px-3 py-2 text-sm border border-slate-200 rounded-lg bg-white hover:bg-slate-50 text-slate-600">
+                Position reflects each publication's process stage (x-axis) and methodological approach (y-axis). Click a bubble to highlight its citation links; click it again to open its source. </p>
+              <button type="button" @click="exportMapSVG()" class="shrink-0 flex items-center gap-1.5 px-3 py-2 text-sm border border-slate-200 rounded-lg bg-white hover:bg-slate-50 text-slate-600">
                 <i class="ti ti-download"></i> Export SVG
               </button>
             </div>
             <div class="relative left-1/2 right-1/2 -mx-[50vw] w-screen px-4 sm:px-8">
               <div class="bg-white rounded-lg border border-slate-200 shadow-sm p-4">
-                <canvas id="mapChart" style="height: 82vh"></canvas>
+                <canvas id="mapChart" class="block w-full h-[75vh] sm:h-[82vh]"></canvas>
               </div>
               <div class="flex flex-wrap gap-x-5 gap-y-2 mt-4 text-xs text-slate-500">
                 <span class="flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded-full inline-block" style="background: rgba(156,156,156,0.6)"></span> Other publication</span>
@@ -184,18 +235,18 @@
               <table class="min-w-full text-sm text-left">
                 <thead class="bg-slate-100 text-slate-600 uppercase text-xs">
                   <tr>
-                    <th class="px-4 py-3 w-12">#</th>
-                    <th class="px-4 py-3">
+                    <th class="px-4 py-3 w-12 whitespace-nowrap">#</th>
+                    <th class="px-4 py-3 whitespace-nowrap">
                       <button type="button" @click="setAuthorSort('name')" class="flex items-center gap-1 hover:text-slate-900">
                         Author <i class="ti" :class="authorSortIcon('name')"></i>
                       </button>
                     </th>
-                    <th class="px-4 py-3 text-right">
+                    <th class="px-4 py-3 text-right whitespace-nowrap">
                       <button type="button" @click="setAuthorSort('count')" class="flex items-center gap-1 ml-auto hover:text-slate-900">
                         Articles <i class="ti" :class="authorSortIcon('count')"></i>
                       </button>
                     </th>
-                    <th class="px-4 py-3 text-right">
+                    <th class="px-4 py-3 text-right whitespace-nowrap">
                       <button type="button" @click="setAuthorSort('fractional')" class="flex items-center gap-1 ml-auto hover:text-slate-900">
                         Fractional credit <i class="ti" :class="authorSortIcon('fractional')"></i>
                       </button>
@@ -205,12 +256,12 @@
                 <tbody class="divide-y divide-slate-100">
                   <template x-for="(author, index) in visibleAuthors()" :key="author.name">
                     <tr class="hover:bg-slate-50">
-                      <td class="px-4 py-3 text-slate-400" x-text="index + 1"></td>
-                      <td class="px-4 py-3 font-medium text-slate-900">
+                      <td class="px-4 py-3 text-slate-400 whitespace-nowrap" x-text="index + 1"></td>
+                      <td class="px-4 py-3 font-medium text-slate-900 whitespace-nowrap">
                         <button type="button" @click="goToAuthor(author.name)" class="text-left hover:text-amber-600 hover:underline" x-text="author.name"></button>
                       </td>
-                      <td class="px-4 py-3 text-right text-slate-600" x-text="author.count"></td>
-                      <td class="px-4 py-3 text-right text-slate-600" x-text="author.fractional.toFixed(2)"></td>
+                      <td class="px-4 py-3 text-right text-slate-600 whitespace-nowrap" x-text="author.count"></td>
+                      <td class="px-4 py-3 text-right text-slate-600 whitespace-nowrap" x-text="author.fractional.toFixed(2)"></td>
                     </tr>
                   </template>
                 </tbody>
@@ -253,18 +304,34 @@
       <div x-show="activeTab === 'about'">
         <div class="max-w-2xl">
           <p class="text-slate-600">
-            This page lists all the publications related to artificial intelligence and beer brewing that we were able to find as part of our literature review.
-          </p>
+            This page lists all the publications related to artificial intelligence and beer brewing that we were able to find as part of our literature review. </p>
           <p class="text-slate-600 mt-4">
             Found a publication that's missing, incorrect, or miscategorized?
-            <a href="https://github.com/krzysztofrewak/ai4brewing/issues" target="_blank" rel="noopener noreferrer" class="text-amber-600 hover:underline">Report it on GitHub</a>.
+            <a href="https://github.com/krzysztofrewak/ai4brewing/issues" target="_blank" rel="noopener noreferrer" class="text-amber-600 hover:underline">Report it on GitHub</a>
+            .
           </p>
+
+          <blockquote x-show="aboutStats" class="mt-6 border-l-4 border-amber-300 bg-amber-50/60 pl-4 py-3 text-sm text-slate-600 italic leading-relaxed">
+            Most publications map to a single cell, but <span class="font-medium not-italic" x-text="aboutStats?.boundaryTotal"></span> of the <span class="font-medium not-italic" x-text="aboutStats?.total"></span> sit at a category
+            boundary. These are predominantly on the AI-approach axis: <span class="font-medium not-italic" x-text="aboutStats?.cvNnBoundary"></span> lie between computer vision and neural networks, where convolutional models serve a vision
+            task, and <span class="font-medium not-italic" x-text="aboutStats?.nnClassicalBoundary"></span> between neural networks and classical methods; only <span class="font-medium not-italic" x-text="aboutStats?.stageBoundary"></span>
+            are placed between adjacent process stages. Across the corpus, quality assurance (<span class="font-medium not-italic" x-text="aboutStats?.qualityAssuranceCount"></span> works) and fermentation
+            (<span class="font-medium not-italic" x-text="aboutStats?.fermentationCount"></span>) are the most studied stages, and neural networks (<span class="font-medium not-italic" x-text="aboutStats?.neuralNetworksCount"></span>) is
+            the most common method family.
+          </blockquote>
+
+          <blockquote x-show="eraStats" class="mt-4 border-l-4 border-amber-300 bg-amber-50/60 pl-4 py-3 text-sm text-slate-600 italic leading-relaxed">
+            Output remained low and intermittent for roughly two decades; the <span class="font-medium not-italic" x-text="eraStats?.earlyCount"></span> works published up to 2004 are dominated by neural and classical methods and are
+            overwhelmingly concerned with fermentation. Annual counts rise from the late 2010s onward, with the highest single-year totals in <span class="font-medium not-italic" x-text="eraStats?.peakYearA"></span> and
+            <span class="font-medium not-italic" x-text="eraStats?.peakYearB"></span> (<span class="font-medium not-italic" x-text="eraStats?.peakCountA"></span> and <span class="font-medium not-italic" x-text="eraStats?.peakCountB"></span>
+            publications, respectively). The <span class="font-medium not-italic" x-text="eraStats?.laterCount"></span> works published from 2017 onward---about two thirds of the corpus---are markedly more diverse, spanning all process
+            stages and all method families.
+          </blockquote>
         </div>
 
         <div class="mt-16 flex flex-wrap items-center justify-center gap-10">
           <div class="flex flex-col items-center gap-3">
-            <span class="text-xs uppercase tracking-wide text-slate-400">Publisher</span>
-            <img src="images/mdpi.png" alt="MDPI" class="h-36">
+            <span class="text-xs uppercase tracking-wide text-slate-400">Publisher</span> <img src="images/mdpi.png" alt="MDPI" class="h-36">
           </div>
 
           <div class="hidden sm:block w-px self-stretch bg-slate-200"></div>
@@ -272,9 +339,7 @@
           <div class="flex flex-col items-center gap-3">
             <span class="text-xs uppercase tracking-wide text-slate-400">Affiliations</span>
             <div class="flex flex-wrap items-center justify-center gap-10">
-              <img src="images/blumilk.png" alt="Blumilk" class="h-36">
-              <img src="images/cwup.png" alt="CWUP" class="h-36">
-              <img src="images/pwr.png" alt="PWr" class="h-36">
+              <img src="images/blumilk.png" alt="Blumilk" class="h-36"> <img src="images/cwup.png" alt="Witelon Collegium State University" class="h-36"> <img src="images/pwr.png" alt="Wrocław Univeristy of Science and Technology" class="h-36">
             </div>
           </div>
         </div>
