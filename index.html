@@ -158,9 +158,7 @@
                     <i class="ti ti-users text-slate-400 mt-0.5"></i>
                     <template x-if="authorList(entry).length === 0"><span>—</span></template>
                     <template x-for="(name, index) in authorList(entry)" :key="index">
-                      <span>
-                        <button type="button" @click="filterByAuthor(name)" title="Filter by author" class="hover:text-amber-600 hover:underline" x-text="name"></button>
-                        <span x-show="index < authorList(entry).length - 1">,</span> </span>
+                      <span><span @click="filterByAuthor(name)" title="Filter by author" class="hover:text-amber-600 hover:underline" x-text="name"></span><span x-show="index < authorList(entry).length - 1">, </span></span>
                     </template>
                   </p>
                   <div class="flex items-center justify-between gap-4 mt-2">
