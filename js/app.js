@@ -1,8 +1,46 @@
+const LATEX_ACCENT_MAP = {
+    "'": {
+        a: "á", e: "é", i: "í", o: "ó", u: "ú", y: "ý", n: "ń", s: "ś", c: "ć", z: "ź",
+        A: "Á", E: "É", I: "Í", O: "Ó", U: "Ú", Y: "Ý", N: "Ń", S: "Ś", C: "Ć", Z: "Ź",
+    },
+    "\"": {
+        a: "ä", e: "ë", i: "ï", o: "ö", u: "ü", y: "ÿ",
+        A: "Ä", E: "Ë", I: "Ï", O: "Ö", U: "Ü",
+    },
+    "`": {
+        a: "à", e: "è", i: "ì", o: "ò", u: "ù",
+        A: "À", E: "È", I: "Ì", O: "Ò", U: "Ù",
+    },
+    "~": {
+        a: "ã", n: "ñ", o: "õ",
+        A: "Ã", N: "Ñ", O: "Õ",
+    },
+    v: {
+        c: "č", s: "š", z: "ž", e: "ě", r: "ř", n: "ň", t: "ť", d: "ď", l: "ľ",
+        C: "Č", S: "Š", Z: "Ž",
+    },
+    c: { c: "ç", C: "Ç" },
+    k: { a: "ą", e: "ę", A: "Ą", E: "Ę" },
+}
+
+const LATEX_LETTER_MAP = { l: "ł", L: "Ł", o: "ø", O: "Ø" }
+
+function decodeLatex(value) {
+    return (value || "")
+        .replace(/\{?\\ss\}?/g, "ß")
+        .replace(/\{\\([lLoO])\}/g, (_, c) => LATEX_LETTER_MAP[c])
+        .replace(/\\(['"`~vkc])\{?([A-Za-z])\}?/g, (_, accent, letter) => {
+            const table = LATEX_ACCENT_MAP[accent]
+            return (table && table[letter]) || letter
+        })
+}
+
 function cleanValue(value) {
     let v = (value || "").trim()
     if (v.startsWith("{") && v.endsWith("}")) {
         v = v.slice(1, -1).trim()
     }
+    v = decodeLatex(v)
     return v
         .replace(/\\&/g, "&")
         .replace(/\\%/g, "%")
@@ -356,7 +394,7 @@ function publications() {
                 this.searchAuthor || this.searchTitle || this.searchSource ||
                 this.typeFilter !== "all" || this.countryFilter !== "all" || this.yearFilter !== "all" ||
                 this.relationFilterKey ||
-                this.listSortKey !== "year" || this.listSortDir !== "desc"
+                this.listSortKey !== "year" || this.listSortDir !== "desc",
             )
         },
 
