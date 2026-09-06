@@ -1,4 +1,41 @@
 {
+  "rewak2026g": {
+    "position": {
+      "x": 2,
+      "y": 0
+    },
+    "country": "pl",
+    "keywords": [],
+    "references": [
+      "baldo2014",
+      "georgiadis2021",
+      "mickein2022",
+      "rewak2025",
+      "rewak2026b",
+      "baldo2017",
+      "mickein2021",
+      "saenz2016",
+      "akaninwor2021",
+      "li2019",
+      "schlechter2020",
+      "koulouris2021",
+      "woestmann2022",
+      "nadybski2022",
+      "zheng2024",
+      "lipka2026",
+      "mickein2022"
+    ]
+  },
+  "lipka2026": {
+    "position": {
+      "x": 2,
+      "y": 5
+    },
+    "country": "de",
+    "keywords": [],
+    "references": [
+    ]
+  },
   "ogbu2026": {
     "position": {
       "x": 2,
@@ -318,7 +355,10 @@
     "country": "pl",
     "keywords": [],
     "references": [
-      "ramirez2020"
+      "kozlowski2019",
+      "ramirez2020",
+      "szczypinski2012",
+      "szczypinski2015"
     ]
   },
   "obrien2024": {
@@ -441,7 +481,16 @@
       "lawrynczuk2011",
       "hou2003",
       "wei2006",
-      "hlangwani2021"
+      "hlangwani2021",
+      "kozlowski2019",
+      "szczypinski2017",
+      "feizi2016",
+      "sarabia1999",
+      "defernez2007",
+      "bai2011",
+      "ermi2018",
+      "hou2005",
+      "riverol2002"
     ]
   },
   "eastment2024": {
@@ -468,6 +517,15 @@
       "y": 1
     },
     "country": "it",
+    "keywords": [],
+    "references": []
+  },
+  "gomezpamies2024": {
+    "position": {
+      "x": 6,
+      "y": 4
+    },
+    "country": "ar",
     "keywords": [],
     "references": []
   },
@@ -527,6 +585,15 @@
       "santos2017",
       "sipos2021"
     ]
+  },
+  "zheng2024": {
+    "position": {
+      "x": 2,
+      "y": 5
+    },
+    "country": "cn",
+    "keywords": [],
+    "references": []
   },
   "castro2023": {
     "position": {
@@ -627,6 +694,18 @@
     "keywords": [],
     "references": []
   },
+  "mickein2022": {
+    "position": {
+      "x": 2,
+      "y": 5
+    },
+    "country": "de",
+    "keywords": [],
+    "references": [
+      "baldo2014",
+      "mickein2021"
+    ]
+  },
   "howard2022": {
     "position": {
       "x": 4,
@@ -678,7 +757,8 @@
     "country": "gb",
     "keywords": [],
     "references": [
-      "alrifaie2022"
+      "alrifaie2022",
+      "ermi2018"
     ]
   },
   "alrifaie2022": {
@@ -695,7 +775,8 @@
       "trelea2004",
       "viejo2020c",
       "shen2019",
-      "viejo2021"
+      "viejo2021",
+      "ermi2018"
     ]
   },
   "nyarko2021": {
@@ -1145,6 +1226,19 @@
       "viejo2018b"
     ]
   },
+  "kozlowski2019": {
+    "position": {
+      "x": 1,
+      "y": 3.5
+    },
+    "country": "pl",
+    "keywords": [],
+    "references": [
+      "szczypinski2012",
+      "szczypinski2015",
+      "szczypinski2017"
+    ]
+  },
   "lukinac2019": {
     "position": {
       "x": 6,
@@ -1297,6 +1391,15 @@
       "viejo2016"
     ]
   },
+  "ermi2018": {
+    "position": {
+      "x": 2,
+      "y": 4
+    },
+    "country": "us",
+    "keywords": [],
+    "references": []
+  },
   "gordon2018": {
     "position": {
       "x": 6,
@@ -1375,6 +1478,18 @@
       "ghasemi2011b"
     ]
   },
+  "szczypinski2017": {
+    "position": {
+      "x": 1,
+      "y": 3
+    },
+    "country": "pl",
+    "keywords": [],
+    "references": [
+      "szczypinski2012",
+      "szczypinski2015"
+    ]
+  },
   "viejo2017": {
     "position": {
       "x": 6,
@@ -1407,6 +1522,15 @@
       "y": 3.5
     },
     "country": "au",
+    "keywords": [],
+    "references": []
+  },
+  "feizi2016": {
+    "position": {
+      "x": 1,
+      "y": 3.5
+    },
+    "country": "us",
     "keywords": [],
     "references": []
   },
@@ -1581,6 +1705,15 @@
       "ghasemi2011"
     ]
   },
+  "bai2011": {
+    "position": {
+      "x": 3,
+      "y": 4
+    },
+    "country": "cn",
+    "keywords": [],
+    "references": []
+  },
   "yazdi2011": {
     "position": {
       "x": 5,
@@ -1754,6 +1887,18 @@
     "keywords": [],
     "references": []
   },
+  "defernez2007": {
+    "position": {
+      "x": 4,
+      "y": 5
+    },
+    "country": "gb",
+    "keywords": [],
+    "references": [
+      "trelea2001",
+      "speers2003"
+    ]
+  },
   "assidjo2006": {
     "position": {
       "x": 4,
@@ -1773,6 +1918,17 @@
     "country": "pl",
     "keywords": [],
     "references": []
+  },
+  "hou2005": {
+    "position": {
+      "x": 3,
+      "y": 4.5
+    },
+    "country": "cn",
+    "keywords": [],
+    "references": [
+      "hou2003"
+    ]
   },
   "duan2004": {
     "position": {
@@ -1827,6 +1983,15 @@
       "y": 4
     },
     "country": "gb",
+    "keywords": [],
+    "references": []
+  },
+  "riverol2002": {
+    "position": {
+      "x": 3,
+      "y": 4
+    },
+    "country": "ie",
     "keywords": [],
     "references": []
   },
@@ -1924,6 +2089,15 @@
     "keywords": [],
     "references": []
   },
+  "sarabia1999": {
+    "position": {
+      "x": 3,
+      "y": 4
+    },
+    "country": "es",
+    "keywords": [],
+    "references": []
+  },
   "toro1997": {
     "position": {
       "x": 4,
@@ -1998,6 +2172,15 @@
       "y": 4.5
     },
     "country": "de",
+    "keywords": [],
+    "references": []
+  },
+  "whitnell1993": {
+    "position": {
+      "x": 4,
+      "y": 5
+    },
+    "country": "ca",
     "keywords": [],
     "references": []
   }
