@@ -546,7 +546,7 @@ function publications() {
 
         sourceName(entry) {
             const f = entry.fields
-            return f.journal || f.booktitle || f.publisher || "—"
+            return f.journal || f.booktitle || f.publisher || f.howpublished || "—"
         },
 
         citationMeta(entry) {
@@ -558,6 +558,7 @@ function publications() {
                 parts.push(`no. ${f.number}`)
             }
             if (f.pages) parts.push(`pp. ${f.pages}`)
+            if (f.eid) parts.push(`id: ${f.eid}`)
             return parts.join(", ")
         },
 
